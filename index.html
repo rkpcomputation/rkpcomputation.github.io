@@ -265,7 +265,7 @@
                 title="LinkedIn">
                 <i class="fab fa-linkedin-in fa-2x"></i>
               </a>
-              <a href="mailto:rajupdl6@gmail.com" title="Email">
+              <a href="mailto:rajupdl6@phys.ncku.edu.tw" id="emailLink" title="Email: rajupdl6@phys.ncku.edu.tw (click to copy)">
                 <i class="fas fa-envelope fa-2x"></i>
               </a>
               <a href="/assets/files/CV_Paudel.pdf" target="_blank" rel="noopener noreferrer" title="CV">
@@ -405,6 +405,25 @@
   </script>
 
   <!-- Local JS files (ensure these paths are correct) -->
+  <div id="emailToast" role="status" aria-live="polite"
+    style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#222;color:#fff;padding:10px 18px;border-radius:8px;font-size:0.95rem;box-shadow:0 4px 14px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .25s;z-index:2000;">
+    Email copied: rajupdl6@phys.ncku.edu.tw
+  </div>
+  <script>
+    // mailto: does nothing when no mail app is configured, so also copy the address and confirm on screen.
+    (function () {
+      var link = document.getElementById('emailLink'), toast = document.getElementById('emailToast');
+      if (!link) return;
+      link.addEventListener('click', function () {
+        var addr = 'rajupdl6@phys.ncku.edu.tw';
+        var show = function (msg) { toast.textContent = msg; toast.style.opacity = '1'; setTimeout(function () { toast.style.opacity = '0'; }, 3000); };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(addr).then(function () { show('Email copied: ' + addr); }, function () { show('Email: ' + addr); });
+        } else { show('Email: ' + addr); }
+      });
+    })();
+  </script>
+
   <script src="/assets/js/jquery.min.js"></script>
   <script src="/assets/js/popper.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
