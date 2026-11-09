@@ -239,21 +239,20 @@
           <li class="pub-item">
             <div class="pub-number">5.</div>
             <div class="pub-authors">
-              Chun Hung Lui, Soonyoung Cha, Zhaoran Xu, Tianyi Ouyang,
-              Hongyu Yao, <strong>Raj Kumar Paudel</strong>,
-              Takashi Taniguchi, Kenji Watanabe, Andrew Y. Joe,
-              Yia-Chung Chang, Nathaniel M. Gabor
+              Soonyoung Cha, Zhaoran Xu, Tianyi Ouyang, Hongyu Yao,
+              <strong>Raj Kumar Paudel</strong>, Takashi Taniguchi, Kenji Watanabe,
+              Andrew Y. Joe, Yia-Chung Chang, Nathaniel M. Gabor, Chun Hung Lui
             </div>
             <div class="pub-title">
               Hybridization-Revealed Interlayer 2p Exciton State in Bilayer MoS₂
             </div>
             <div class="pub-meta">
-              Nature Physics (Accepted, 2026)
+              Nature Physics (2026)
               <span class="badge-pub">Accepted</span>
             </div>
           </li>
-        </ul>
-                  <li class="pub-item">
+
+          <li class="pub-item">
             <div class="pub-number">4.</div>
             <div class="pub-authors">
               <strong>Raj Kumar Paudel</strong>, Chung-Yuan Ren, Yia-Chung Chang
@@ -267,10 +266,11 @@
               <a href="https://doi.org/10.1016/j.cpc.2026.110240" target="_blank" rel="noopener noreferrer">DOI</a>
             </div>
           </li>
+
           <li class="pub-item">
             <div class="pub-number">3.</div>
             <div class="pub-authors">
-              Tianyi Ouyang, Erfu Liu, Soonyoung Cha, R Cang,
+              Tianyi Ouyang, Erfu Liu, Soonyoung Cha, Rukai Cang,
               <strong>Raj Kumar Paudel</strong>, Yiyang Sun, Zhaoran Xu,
               Takashi Taniguchi, Kenji Watanabe, Nathaniel M. Gabor,
               Yia-Chung Chang, Chun Hung Lui
@@ -281,29 +281,15 @@
             <div class="pub-meta">
               Physical Review Letters 136 (9), 096903 (2026)
               <span class="badge-pub">Published</span>
+              <span class="badge-pub">Editors' Suggestion</span>
               <a href="https://doi.org/10.1103/mjhj-83wc" target="_blank" rel="noopener noreferrer">DOI</a>
             </div>
           </li>
+        </ul>
 
-          
         <!-- 2023 -->
         <h3 class="pub-year">2023</h3>
         <ul class="pub-list">
-          <li class="pub-item">
-            <div class="pub-number">1.</div>
-            <div class="pub-authors">
-              Chung-Yuan Ren, <strong>Raj Kumar Paudel</strong>, Yia-Chung Chang
-            </div>
-            <div class="pub-title">
-              Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis
-            </div>
-            <div class="pub-meta">
-              Nanomaterials 13 (13), 1912 (2023)
-              <span class="badge-pub">Published</span>
-              <a href="https://doi.org/10.3390/nano13131912" target="_blank" rel="noopener noreferrer">DOI</a>
-            </div>
-          </li>
-
           <li class="pub-item">
             <div class="pub-number">2.</div>
             <div class="pub-authors">
@@ -318,6 +304,21 @@
               <a href="https://doi.org/10.3390/nano13142066" target="_blank" rel="noopener noreferrer">DOI</a>
             </div>
           </li>
+
+          <li class="pub-item">
+            <div class="pub-number">1.</div>
+            <div class="pub-authors">
+              Chung-Yuan Ren, <strong>Raj Kumar Paudel</strong>, Yia-Chung Chang
+            </div>
+            <div class="pub-title">
+              Density Functional Theory for Buckyballs within Symmetrized Icosahedral Basis
+            </div>
+            <div class="pub-meta">
+              Nanomaterials 13 (13), 1912 (2023)
+              <span class="badge-pub">Published</span>
+              <a href="https://doi.org/10.3390/nano13131912" target="_blank" rel="noopener noreferrer">DOI</a>
+            </div>
+          </li>
         </ul>
 
         <!-- If needed later:
@@ -329,16 +330,14 @@
 
   <footer class="sticky-bottom mt-5 py-3">
     <div class="container text-center">
-      © <span id="currentYearFooter"></span> Raj Kumar Paudel. Powered by
-      <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a>
-      and
+      © <span id="currentYearFooter"></span> Raj Kumar Paudel. Hosted on
       <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.<br>
       Last updated: <span id="lastUpdated"></span>.
     </div>
   </footer>
 
   <script>
-    document.getElementById('lastUpdated').textContent = new Date().toLocaleDateString('en-US', {
+    document.getElementById('lastUpdated').textContent = new Date(document.lastModified).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
