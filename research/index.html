@@ -174,6 +174,39 @@
       line-height: 1.6;
     }
 
+    .pub-ref {
+      font-size: 0.95rem;
+      color: #444 !important;
+      background: #f4f8fd;
+      border-left: 3px solid #007bff;
+      padding: 0.5rem 0.75rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem !important;
+    }
+
+    .paper-figure {
+      margin: 1rem auto 1.75rem;
+      text-align: center;
+    }
+
+    .paper-figure img {
+      display: block;
+      width: 100%;
+      max-width: 880px;
+      height: auto;
+      margin: 0 auto;
+      background: #fff;
+      border: 1px solid #e3e3e3;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      cursor: zoom-in;
+    }
+
+    .research-card h3 {
+      margin-top: 1.75rem;
+    }
+
     footer.sticky-bottom {
       padding-top: 1rem;
       padding-bottom: 1rem;
@@ -250,176 +283,135 @@
         <header class="post-header mb-4">
           <h1 class="post-title">Research</h1>
           <p class="lead mb-0">
-            My research focuses on developing and applying computational methods to understand the electronic and optical properties of emerging quantum materials.
-            I work on method development, band-structure modeling, exciton physics, and quantum transport in low-dimensional systems.
+            I develop and apply computational methods &mdash; first-principles calculations, exciton theory,
+            semi-empirical pseudopotentials, and quantum transport &mdash; to understand the electronic, optical,
+            and transport properties of low-dimensional materials.
           </p>
         </header>
 
+        <!-- 1. Recent publications -->
+        <section class="research-card">
+          <h2 class="section-title">Recent Publications (2026)</h2>
+
+          <h3>Hybridization-Revealed Interlayer 2p Exciton State in Bilayer MoS&#8322;</h3>
+          <p class="pub-ref">
+            S. Cha, Z. Xu, T. Ouyang, H. Yao, <strong>R. K. Paudel</strong>, T. Taniguchi, K. Watanabe, A. Y. Joe,
+            Y.-C. Chang, N. M. Gabor, C. H. Lui &mdash; <em>Nature Physics</em> (accepted, 2026).
+            <a class="highlight-link" href="https://www.researchsquare.com/article/rs-6734783/v1" target="_blank" rel="noopener noreferrer">Preprint</a>
+          </p>
+          <p>
+            Beyond the 1s ground state, bilayer MoS&#8322; hosts a full Rydberg series of interlayer excitons from 1s to 4s,
+            together with a 2p interlayer state. The 2p exciton is dark at zero field; an applied electric field mixes it
+            with the intralayer A exciton, and it becomes optically visible. While the intralayer series fades beyond 2s,
+            the interlayer series remains visible up to 4s.
+          </p>
+          <figure class="paper-figure">
+            <img src="/assets/img/BL_MoS2.png" alt="Interlayer exciton states in bilayer MoS2" data-zoomable loading="lazy" decoding="async">
+            <figcaption class="figure-caption">Fig. 1: Calculated s-like and p-like interlayer exciton states in bilayer MoS&#8322;.</figcaption>
+          </figure>
+
+          <h3>Brightening Interlayer Excitons by Electric-Field-Driven Hole Transfer in Bilayer WSe&#8322;</h3>
+          <p class="pub-ref">
+            T. Ouyang, E. Liu, S. Cha, R. Cang, <strong>R. K. Paudel</strong>, Y. Sun, Z. Xu, T. Taniguchi, K. Watanabe,
+            N. M. Gabor, Y.-C. Chang, C. H. Lui &mdash; <em>Physical Review Letters</em> <strong>136</strong>, 096903 (2026),
+            Editors' Suggestion.
+            <a class="highlight-link" href="https://doi.org/10.1103/mjhj-83wc" target="_blank" rel="noopener noreferrer">DOI</a> &middot;
+            <a class="highlight-link" href="https://arxiv.org/abs/2506.22660" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+          <p>
+            Under an applied electric field, reflectance-contrast spectroscopy resolves the interlayer A1s, A2s and B1s
+            excitons of bilayer WSe&#8322;. Our DFT calculations show that the field distorts the valence-band Bloch states
+            and moves the hole from one layer to the other. The interlayer excitons thereby gain intralayer character and
+            oscillator strength without needing to hybridize with bright intralayer states &mdash; a general brightening
+            mechanism for bilayer TMDs whenever inter- and intralayer excitons are well separated in energy.
+          </p>
+          <figure class="paper-figure">
+            <img src="/assets/img/prl_wse2_hole_transfer.jpg" alt="Field-driven hole transfer in bilayer WSe2" data-zoomable loading="lazy" decoding="async">
+            <figcaption class="figure-caption">Fig. 2: (a) DFT hole density across bilayer WSe&#8322; for fields 0&ndash;0.7 V/nm; (b) measured and (d) simulated reflectance spectra; (c) field-dependent exciton coupling strengths. Click to enlarge.</figcaption>
+          </figure>
+
+          <h3>Semi-Empirical Pseudopotential Method for Monolayer Transition-Metal Dichalcogenides</h3>
+          <p class="pub-ref">
+            <strong>R. K. Paudel</strong>, C.-Y. Ren, Y.-C. Chang &mdash; <em>Computer Physics Communications</em>
+            <strong>327</strong>, 110240 (2026).
+            <a class="highlight-link" href="https://doi.org/10.1016/j.cpc.2026.110240" target="_blank" rel="noopener noreferrer">DOI</a> &middot;
+            <a class="highlight-link" href="https://arxiv.org/abs/2406.15913" target="_blank" rel="noopener noreferrer">arXiv</a>
+          </p>
+          <p>
+            We extended SEPM to monolayer TMDCs. The method gives DFT-quality band structures at a fraction of the cost
+            and isolates the electronic ingredients that control optical response and exciton formation.
+          </p>
+          <figure class="paper-figure">
+            <img src="/assets/img/sepm_tmdc_bands.svg" alt="SEPM versus DFT band structures of monolayer TMDCs" data-zoomable loading="lazy" decoding="async">
+            <figcaption class="figure-caption">Fig. 3: SEPM (red) versus DFT (dashed) band structures of monolayer WSe&#8322;, MoSe&#8322;, MoS&#8322; and WS&#8322;.</figcaption>
+          </figure>
+        </section>
+
+        <!-- 2. Current work -->
+        <section class="research-card">
+          <h2 class="section-title">Current Work: Charge Transfer and Quantum Transport in F4TCNQ&ndash;Graphene</h2>
+          <p>
+            I study charge transfer and transport in F4TCNQ molecules adsorbed on graphene. Using large graphene
+            supercells (e.g., 16 &times; 16), we follow how molecular adsorption modifies graphene's electronic structure,
+            redistributes charge, and changes its transport characteristics.
+          </p>
+          <p>
+            The calculations combine density functional theory with non-equilibrium Green's function (NEGF) transport
+            to obtain transmission spectra and conductance, and to identify how molecular dopants act in graphene-based
+            devices. This work is carried out in the group of <strong>Prof. Ming-Hao Liu</strong> at NCKU.
+          </p>
+          <ul class="topic-list">
+            <li>DFT-based electronic structure of molecule&ndash;graphene interfaces</li>
+            <li>Charge-density difference and electron-transfer analysis</li>
+            <li>NEGF-based transmission and conductance calculations</li>
+            <li>Design principles for molecularly functionalized graphene devices</li>
+          </ul>
+        </section>
+
+        <!-- 3. SEPM method -->
         <section class="research-card">
           <h2 class="section-title">Semi-Empirical Pseudopotential Method (SEPM)</h2>
           <p>
-            A major part of my work is the development and application of the Semi-Empirical Pseudopotential Method (SEPM).
-            This approach provides an efficient and accurate way to compute electronic structures for large and complex systems.
-            In our implementation, the in-plane coordinates are treated with plane waves, while the out-of-plane direction is expanded using B-spline basis functions.
-            The method includes local and non-local potential terms and is parameterized to reproduce key results from first-principles Density Functional Theory (DFT) calculations and, where available, experimental data.
+            A major part of my work is the development of the Semi-Empirical Pseudopotential Method (SEPM), an efficient
+            and accurate way to compute electronic structures for large and complex systems. In our implementation the
+            in-plane coordinates are treated with plane waves, while the out-of-plane direction is expanded in B-spline
+            basis functions. The method includes local and non-local potential terms and is parameterized to reproduce
+            first-principles DFT results and, where available, experimental data.
           </p>
           <p>
-            This work is carried out in collaboration with <a class="highlight-link" href="https://sso.nknu.edu.tw/DataOpen2Search/vita.aspx?UNID=3094&Lang=enUS#" target="_blank" rel="noopener noreferrer">Prof. Chung-Yuan Ren (NKNU)</a>.
+            This work is carried out in collaboration with
+            <a class="highlight-link" href="https://sso.nknu.edu.tw/DataOpen2Search/vita.aspx?UNID=3094&Lang=enUS#" target="_blank" rel="noopener noreferrer">Prof. Chung-Yuan Ren (NKNU)</a>.
           </p>
 
-          <h3>Applications to Graphene and Graphene Nanoribbons</h3>
+          <h3>Graphene and Graphene Nanoribbons</h3>
           <p>
-            We have applied SEPM to graphene and armchair graphene nanoribbons (aGNRs), capturing the Dirac-cone physics of graphene and the width-dependent band gaps of nanoribbons.
-            These results are useful for understanding nanoelectronic behavior in carbon-based materials.
-            Related work is reported in <a class="highlight-link" href="https://www.mdpi.com/2079-4991/13/14/2066" target="_blank" rel="noopener noreferrer">Semi-Empirical Pseudopotential Method for Graphene and Graphene Nanoribbons</a>.
+            SEPM captures the Dirac-cone physics of graphene and the width-dependent band gaps of armchair graphene
+            nanoribbons (aGNRs), useful for understanding nanoelectronic behavior in carbon-based materials:
+            <a class="highlight-link" href="https://doi.org/10.3390/nano13142066" target="_blank" rel="noopener noreferrer">Nanomaterials 13, 2066 (2023)</a>.
           </p>
-
-          <div class="figure-grid">
-            <div class="row">
-              <div class="col-md-10 offset-md-1">
-                <div class="figure-container">
-                  <img src="/assets/img/graphene_bandstr.png" alt="Graphene band structure via SEPM">
-                  <div class="figure-caption">Fig. 1: Graphene band structure from SEPM (solid) compared with DFT (dashed).</div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-10 offset-md-1">
-                <div class="figure-container">
-                  <img src="/assets/img/bndstructureAGNRDFTEPM.png" alt="Armchair graphene nanoribbon band structure">
-                  <div class="figure-caption">Fig. 2: aGNR band structures from DFT (dashed) and SEPM (solid).</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <h3>Applications to Transition-Metal Dichalcogenides (TMDCs)</h3>
-          <p>
-            The SEPM framework has also been extended to monolayer transition-metal dichalcogenides (TMDCs).
-            This provides a fast and reliable way to calculate band structures and to study the electronic ingredients that influence optical response and exciton formation.
-            Published in <a class="highlight-link" href="https://doi.org/10.1016/j.cpc.2026.110240" target="_blank" rel="noopener noreferrer">Semi-empirical Pseudopotential Method for Monolayer Transition-Metal Dichalcogenides</a>, Computer Physics Communications 327, 110240 (2026).
-          </p>
-
-          <div class="figure-grid">
-            <div class="row">
-              <div class="col-md-10 offset-md-1">
-                <div class="figure-container">
-                  <img src="/assets/img/comp_bnd_tmdc.png" alt="Comparison of DFT and SEPM band structure for monolayer TMDCs">
-                  <div class="figure-caption">Fig. 3: Band-structure comparison for monolayer TMDCs: SEPM (solid) versus DFT (circles).</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <figure class="paper-figure">
+            <img src="/assets/img/graphene_bandstr.png" alt="Graphene band structure via SEPM" data-zoomable loading="lazy" decoding="async">
+            <figcaption class="figure-caption">Fig. 4: Graphene band structure from SEPM (solid) compared with DFT (dashed).</figcaption>
+          </figure>
         </section>
 
+        <!-- 4. Future directions -->
         <section class="research-card">
-          <h2 class="section-title">Exciton Physics in TMDCs</h2>
+          <h2 class="section-title">Future Directions</h2>
           <p>
-            Monolayer and few-layer TMDCs exhibit strong light-matter interaction dominated by excitons, which are bound electron-hole pairs.
-            My research in this area focuses on exciton binding energies, interlayer and intralayer excitons, electric-field control, and hybridization effects.
-            These systems are important for next-generation optoelectronic and valleytronic devices.
+            Future research will focus on computational frameworks that bridge electronic structure, many-body physics,
+            and quantum transport in low-dimensional materials. One direction is extending SEPM to large-scale 2D
+            materials and van der Waals heterostructures, where accurate interlayer coupling, moir&eacute; potentials,
+            and electric-field effects open access to new electronic phases and excitonic phenomena in twisted bilayers.
           </p>
-          <ul class="topic-list">
-            <li>Interlayer and intralayer excitons in monolayer and bilayer TMDCs</li>
-            <li>Electric-field-driven brightening and charge redistribution</li>
-            <li>2p interlayer exciton states and hybridization effects</li>
-          </ul>
-
-          <div class="figure-grid mt-3">
-            <div class="row">
-              <div class="col-md-10 offset-md-1">
-                <div class="figure-container">
-                  <img src="/assets/img/BL_MoS2.png" alt="Interlayer excitons in bilayer MoS2">
-                  <div class="figure-caption">Fig. 4: Calculated s-like and p-like interlayer exciton states in bilayer MoS₂.</div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-10 offset-md-1">
-                <div class="figure-container">
-                  <img src="/assets/img/BL_WSe2.png" alt="Electric field effects in bilayer WSe2">
-                  <div class="figure-caption">Fig. 5: Electric field tunes hole distribution and exciton properties in bilayer WSe₂.</div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p>
+            Another direction connects materials modeling with devices: combining DFT with NEGF to explore charge
+            transfer, molecular doping, and transport in functionalized 2D materials, including graphene-based molecular
+            interfaces. The goal is computational tools that predict electronic, optical, and transport properties of
+            quantum materials and guide the design of nanoelectronic and optoelectronic devices.
+          </p>
         </section>
-
-        <section class="research-card">
-<h2 class="section-title">Transport and Charge Transfer in F4TCNQ–Graphene Systems</h2>
-
-<p>
-A current direction involves studying charge transfer and transport properties of
-F4TCNQ molecules adsorbed on graphene. Using large-scale graphene supercells
-(e.g., a 16 × 16 graphene supercell), we investigate the modification of graphene's
-electronic structure, charge redistribution, and transport characteristics induced by
-molecular adsorption.
-</p>
-
-
-<p>
-The calculations combine density functional theory with quantum transport methods
-to analyze transmission spectra, conductance behavior, and the influence of molecular
-dopants on graphene-based electronic devices. This work is carried out in the group of <strong>Prof. Ming-Hao Liu</strong> at NCKU.
-</p>
-
-
-<ul class="topic-list">
-
-<li>DFT-based electronic structure calculations of molecule–graphene interfaces</li>
-
-<li>Charge density difference and electron transfer analysis</li>
-
-<li>NEGF-based transmission and conductance calculations</li>
-
-<li>Design principles for molecularly functionalized graphene devices</li>
-
-</ul>
-
-</section>
-
-<section class="research-card">
-
-<h2 class="section-title">
-Future Directions
-</h2>
-
-
-<p>
-Future research will focus on developing efficient computational frameworks that
-bridge electronic structure calculations, many-body physics, and quantum transport
-in emerging low-dimensional materials. By combining semi-empirical pseudopotential
-methods (SEPM), first-principles calculations, and quantum transport approaches,
-I aim to study complex quantum systems beyond the limitations of conventional
-computational methods.
-</p>
-
-
-<p>
-One important direction is extending SEPM toward large-scale two-dimensional
-materials and van der Waals heterostructures. Accurate modeling of interlayer
-coupling, moiré potentials, and electric-field effects will enable the investigation
-of novel electronic phases and excitonic phenomena in twisted bilayer systems.
-</p>
-
-
-<p>
-Another direction involves connecting material modeling with device applications
-through quantum transport calculations. By combining density functional theory with
-nonequilibrium Green's function (NEGF) methods, future work will explore charge
-transfer, molecular doping, and transport properties of functionalized 2D materials,
-including graphene-based molecular interfaces.
-</p>
-
-
-<p>
-Ultimately, the goal is to develop computational tools that can efficiently predict
-electronic, optical, and transport properties of quantum materials and guide the
-design of next-generation nanoelectronic and optoelectronic devices.
-</p>
-
-
-</section>
+      </section>
     </div>
   </main>
 
